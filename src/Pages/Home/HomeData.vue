@@ -33,8 +33,40 @@ import MusicList from "../../components/MusicList";
             })
             .then(res => {
                 this.todayRecommend = res.data.song_list;
-            });          
-        }
+            });   
+
+            this.$api
+            .getTodayRecommend({
+                method: "baidu.ting.billboard.billList",
+                type: 2,
+                size: 6,
+                offset: 0
+            })
+            .then(res => {
+                this.hotMusic = res.data.song_list;
+            });
+
+                    this.$api
+            .getTodayRecommend({
+                method: "baidu.ting.billboard.billList",
+                type: 11,
+                size: 3,
+                offset: 0
+            })
+            .then(res => {
+                this.rockMusic = res.data.song_list;
+            });
+        
+            this.$api.getTodayRecommend({
+                method: "baidu.ting.billboard.billList",
+                    type: 22,
+                    size: 6,
+                    offset: 0
+                })
+                .then(res => {
+                    this.oldMusic = res.data.song_list;
+                });       
+            }
     }
 </script>
 
