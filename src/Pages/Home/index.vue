@@ -1,12 +1,17 @@
 <template>
     <div>
-        Home
+        <HomeData />
     </div>
 </template>
 
 <script>
+import HomeData from './HomeData'
+
     export default {
-        name:'Home'
+        name:'Home',
+        components:{
+            HomeData
+        }
     }
 </script>
 

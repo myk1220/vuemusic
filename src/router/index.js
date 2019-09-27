@@ -7,6 +7,7 @@ import Mine from '../Pages/Mine'
 import Search from '../Pages/Search'
 import SongList from '../Pages/SongList'
 import Top from '../Pages/Top'
+import Player from '../Pages/Player'
 import NotFound from '../Pages/NotFound'
 
 Vue.use(Router)
@@ -44,6 +45,11 @@ export default new Router({
       path: '/top',
       name: 'Top',
       component: Top
+    },
+    {
+      path: '/player:id',
+      name: 'Player',
+      component: Player
     },
     {
       path: '*',
