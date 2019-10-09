@@ -1,7 +1,7 @@
 <template>
     <div>
-        <HomeData />
         <HomeSwiper :img='imgs' />
+        <HomeData />
     </div>
 </template>
 

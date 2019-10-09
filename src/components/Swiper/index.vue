@@ -1,8 +1,10 @@
 <template>
   <swiper :options="swiperOption">
     <swiper-slide v-for="(item,index) in img" :key='index'>
-        <div class="banner">
-            <img :src="item" alt="加载失败">
+        <div class="banner-wrap">
+            <div class="banner">
+                <img :src="item" alt="加载失败">
+            </div>
         </div>
     </swiper-slide>
     <div class="swiper-pagination"  slot="pagination"></div>
@@ -19,7 +21,9 @@
                     el: '.swiper-pagination'
                     },
                     loop:true,
-                    autoplay:true,
+                    autoplay:{
+                        disableOnInteraction: false,
+                    }
                 },
             }
         },
@@ -35,11 +39,17 @@
 </script>
 
 <style scoped>
-.banner {
-    padding: 10px;
+.banner-wrap {
+    background-color: #f8f8f8;
+    padding: 10px 0;
 }
 
-.banner img {
+.banner-wrap .banner {
+    padding: 15px;
+    background-color: #fff;
+}
+
+.banner-wrap .banner img {
     border-radius: 10px;
 }
 </style>
