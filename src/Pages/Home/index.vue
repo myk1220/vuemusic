@@ -1,11 +1,14 @@
 <template>
     <div>
+        <Nav />
         <HomeSwiper :img='imgs' />
         <HomeData />
     </div>
 </template>
 
 <script>
+
+import Nav from '../../components/Nav'
 import HomeData from './HomeData'
 import HomeSwiper from '../../components/Swiper'
 
@@ -13,7 +16,8 @@ import HomeSwiper from '../../components/Swiper'
         name:'Home',
         components:{
             HomeData,
-            HomeSwiper
+            HomeSwiper,
+            Nav
         },
         data(){
             return{

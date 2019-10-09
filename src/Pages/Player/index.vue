@@ -1,12 +1,12 @@
 <template>
-    <div class="play" v-if="playerInfo.songinfo">
+    <div ref='play' class="play" v-if="playerInfo.songinfo">
         <div class="header">
             <div class="title">
                 <router-link to="/">
                     <i class="iconfont icon-shouye left"></i>
                 </router-link>
                 <div class="music-info">
-                    <p>{{ playerInfo.songinfo.title }}</p>
+                    <p class="song-title">{{ playerInfo.songinfo.title }}</p>
                     <p class="author">{{ playerInfo.songinfo.author }}</p>
                 </div>
                 <router-link to="/search">
@@ -43,7 +43,7 @@ export default {
         return {
             playerInfo: {},
             currentTime:"",
-            duration:""
+            duration:"",
         };
     },
     components:{
@@ -59,9 +59,10 @@ export default {
                 this.playerInfo = res.data;
                 // DOM还没有更新
                 this.$nextTick(function() {
+                    this.$refs.play.style.height = document.documentElement.clientHeight + "px";
                     // DOM 现在更新了
                    //获取当前播放时间和总时长
-                   this.playerAddEventListen();
+                    this.playerAddEventListen();
                 });
             });
     },
@@ -90,7 +91,7 @@ export default {
 
 <style scoped>
 .header {
-    padding: 15px;
+    padding:15px;
 }
 
 .music-info {
@@ -121,11 +122,19 @@ export default {
 
 .song-info-img {
     text-align: center;
+    margin-top: 20px;
+    background-color: rgb(236, 232, 232);
+    border-radius: 20%;
+}
+
+.song-title {
+    padding: 0 10px;
 }
 
 .song-info-img img {
     width: 50%;
     border-radius: 5px;
+    margin-bottom: 20px;
     box-shadow: 0 0 10px 0 rgba(50, 50, 50, 0.31);
 }
 
@@ -146,6 +155,7 @@ export default {
 .song {
     width: 100%;
     text-align: center;
+    margin-top: 30px;
 }
 
 .song audio {

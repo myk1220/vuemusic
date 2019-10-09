@@ -77,7 +77,7 @@ export default {
         // 字节跳动
         scrollLRC(index){
             if(this.currentTime > this.allKeys[index]  && this.currentTime < this.allKeys[index+1]){
-                this.$refs.lrc.style.animation top = (-((index-2) * 30)) + "px";
+                this.$refs.lrc.style.top = (-((index-2) * 30)) + "px";
             }
         }
     }

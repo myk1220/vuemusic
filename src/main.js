@@ -8,6 +8,7 @@ import api from "./api"
 
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
+import './assets/font/iconfont.css'
 
 
 Vue.use(VueAwesomeSwiper);
