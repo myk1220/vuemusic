@@ -3,6 +3,7 @@
         <Nav />
         <HomeSwiper :img='imgs' />
         <HomeData />
+        <BackTop />
     </div>
 </template>
 
@@ -11,13 +12,15 @@
 import Nav from '../../components/Nav'
 import HomeData from './HomeData'
 import HomeSwiper from '../../components/Swiper'
+import BackTop from '../../components/BackTop'
 
     export default {
         name:'Home',
         components:{
             HomeData,
             HomeSwiper,
-            Nav
+            Nav,
+            BackTop
         },
         data(){
             return{
