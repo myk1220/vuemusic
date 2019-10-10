@@ -2,6 +2,7 @@
     <div>
         <Nav />
         <HomeSwiper :img='imgs' />
+        <HomeTab />
         <HomeData />
         <BackTop />
     </div>
@@ -9,6 +10,7 @@
 
 <script>
 
+import HomeTab from './HomeTab'
 import Nav from '../../components/Nav'
 import HomeData from './HomeData'
 import HomeSwiper from '../../components/Swiper'
@@ -20,7 +22,8 @@ import BackTop from '../../components/BackTop'
             HomeData,
             HomeSwiper,
             Nav,
-            BackTop
+            BackTop,
+            HomeTab
         },
         data(){
             return{

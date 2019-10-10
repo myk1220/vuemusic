@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <router-view/>
+    <keep-alive exclude="Player">
+        <router-view/> 
+    </keep-alive>
   </div>
 </template>
 
@@ -9,7 +11,7 @@
   export default {
     name: 'App',
     components:{
-    }
+    },
   }
 </script>
 
