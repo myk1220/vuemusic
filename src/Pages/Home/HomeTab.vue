@@ -143,10 +143,10 @@
 
 .more-songs {
     color: #999;
-    margin-top: 9px;
-    font-size: 12px;
+    margin-top: 4px;
+    font-size: 14px;
     text-align: center;
-    height: 32px;
-    line-height: 32px;
+    height: 10px;
+    line-height: 10px;
 }
 </style>
