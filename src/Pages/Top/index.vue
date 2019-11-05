@@ -37,6 +37,16 @@
                         title:'摇滚榜',
                         imgSrc:require("../../assets/img/4.jpg")
                     },
+                    {
+                        typ:'16',
+                        title:'流行榜',
+                        imgSrc:require("../../assets/img/5.jpg")
+                    },
+                    {
+                        typ:'21',
+                        title:'欧美榜',
+                        imgSrc:require("../../assets/img/6.jpg")
+                    },
                 ],
             }
         }

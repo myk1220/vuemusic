@@ -67,6 +67,12 @@
                 case "22":
                 _this.title = '经典歌曲'
                 break;
+                case "16":
+                _this.title = '流行歌曲'
+                break;
+                case "21":
+                _this.title = '欧美金曲'
+                break;
             }
         },
         methods:{
