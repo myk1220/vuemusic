@@ -83,7 +83,7 @@
 
 <style  scoped>
 .header {
-    padding:15px;
+    padding:15px 15px 12px 15px;
     background-color: #fff;
     margin-bottom: 2px;
 }
@@ -102,8 +102,8 @@
     font-size: 30px;
 }
 
-.ca {
-    color: red;
+.song-title{
+    font-weight: 600;
 }
 
 .right {
