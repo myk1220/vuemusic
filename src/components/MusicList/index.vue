@@ -3,7 +3,7 @@
         <div class="block-padding">
             <div class="title">
                 <h3>{{ title }}</h3>
-                <a>更多</a>
+                <router-link :to="{name:'More',params:{type:mType}}">更多</router-link>
             </div>
             <div class="list clearfix" v-if="data.length>0">
                 <router-link :to="{name:'Player',params:{id:item.song_id}}" :class="{'clear-padding': index%3 !== 1}" v-for="(item,index) in data" :key="index" class="item">
@@ -38,6 +38,10 @@
                     return [];
                 }
             },
+            mType:{
+                type:[String,Number],
+                default:''
+            }
         },
         methods:{
             setText(text){

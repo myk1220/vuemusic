@@ -1,9 +1,9 @@
 <template>
     <div>
-        <MusicList title="今日推荐" v-if="todayRecommend.length>0" :data="todayRecommend"/>
-        <MusicList title="热门推荐" v-if="hotMusic.length>0" :data="hotMusic"/>
-        <MusicList title="摇滚歌曲" v-if="rockMusic.length>0" :data="rockMusic"/>
-        <MusicList title="经典歌曲" v-if="oldMusic.length>0" :data="oldMusic"/>
+        <MusicList title="今日推荐" mType='1' v-if="todayRecommend.length>0" :data="todayRecommend"/>
+        <MusicList title="热门推荐" mType='2' v-if="hotMusic.length>0" :data="hotMusic"/>
+        <MusicList title="摇滚歌曲" mType='11' v-if="rockMusic.length>0" :data="rockMusic"/>
+        <MusicList title="经典歌曲" mType='22' v-if="oldMusic.length>0" :data="oldMusic"/>
     </div>
 </template>
 
